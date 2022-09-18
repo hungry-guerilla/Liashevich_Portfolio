@@ -1,0 +1,207 @@
+    /* poppins-regular - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/poppins-v20-latin-regular.eot');
+        /* IE9 Compat Modes */
+        src: local(''), url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), url('../fonts/poppins-v20-latin-regular.woff') format('woff'), url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'), url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg');
+        /* Legacy iOS */
+    }
+    html {
+        box-sizing: border-box;
+        background-color: #070606;
+    }
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+    body {
+        font-family: 'Poppins';
+    }
+    .content {
+        margin-top: 40px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+    .wrapper {
+        max-width: 1720px;
+        margin: 0 auto;
+        background-color: #070606;
+    }
+    .header_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header_wrapper .logo_title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        letter-spacing: 0.27em;
+        color: #FF003D;
+        filter: blur(1.1px);
+    }
+    .header_wrapper .logo_fio {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 60px;
+        text-align: right;
+        letter-spacing: 0.055em;
+        color: #FF2B51;
+        filter: blur(1px);
+    }
+    .menu_wrapper {
+        position: relative;
+        float: right;
+        top: 170px;
+        left: 50px;
+        width: 200px;
+        height: 50px;
+        transform: rotate(90deg);
+    }
+    .menu_wrapper .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu_wrapper .menu a {
+        padding-right: 70px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0.055em;
+        text-decoration: none;
+        color: #FFFFFF;
+        transition: 0.4s all;
+    }
+    .menu_wrapper .menu a:hover {
+        filter: blur(3px);
+        color: #FF2B51;
+    }
+
+    .about_link:active {
+        color:#FF2B51;
+        filter: blur(3px);
+    }
+    
+    .image_wrapper .anon {
+        margin: 0;
+        position: relative;
+        left: 450px;
+        width: 451px;
+        height: 536px;
+        z-index: 1000;
+    }
+    .image_wrapper .circle {
+        position: relative;
+        right: 10px;
+        bottom: 50px;
+        width: 507px;
+        height: 507px;
+        z-index: 999;
+    }
+    .image_wrapper .blur_circle {
+        position: relative;
+        right: 23px;
+        bottom: 20px;
+        width: 87px;
+        height: 87px;
+        filter: blur(1px);
+       
+    }
+
+    .image_wrapper .blur_circle_2 {
+        position: relative;
+        left: 423px;
+        bottom: 20px;
+        width: 157px;
+        height: 157px;
+        filter: blur(1px);
+    }
+        
+
+    .image_wrapper .blur_circle_3 {
+        position: relative;
+        right: 100px;
+        bottom: 130px;
+        width: 57px;
+        height: 57px;
+        filter: blur(1px);
+        
+    }
+    /* Смартфоны (портретный и альбомный режимы) ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+        body {
+        overflow: hidden;
+        }
+        .menu_wrapper .menu {
+        display: flex;
+        flex-direction: column;
+        font-size: 1px;
+        margin: 0 auto;
+        transform: rotate(270deg);
+        text-align: center;
+        }
+        .logo_fio {
+        display: none;
+        }
+        a {
+        text-align: center;
+        }
+        .logo_title {
+        margin: 50px 150px 250px 100px;
+        transition: 0.4s all;
+        }
+        .logo_title:hover {
+        color: pink;
+        filter: blur(4px);
+        }
+        .circle, .blur_circle, .anon {
+        display: none;
+        /* Сюда добавляем стили*/
+        }
+    }
+    /* Смартфоны (альбомный режим) ----------- */
+    @media only screen and (min-width: 321px) {
+        /* Сюда добавляем стили*/
+    }
+    /* Смартфоны (портретный режим) ----------- */
+    @media only screen and (max-width: 320px) {
+        /* Сюда добавляем стили*/
+    }
+    /* iPad (портретный и альбомный режимы) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* Сюда добавляем стили*/
+    }
+    /* iPad (альбомный режим) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        /* Сюда добавляем стили*/
+    }
+    /* iPad (портретный режим) ----------- */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        /* Сюда добавляем стили*/
+    }
+    /* Настольные компьютеры и ноутбуки ----------- */
+    @media only screen and (min-width: 1224px) {
+        /* Сюда добавляем стили*/
+    }
+    /* Большие экраны ----------- */
+    @media only screen and (min-width: 1824px) {
+        /* Сюда добавляем стили*/
+    }
+    /* iPhone 5 (портретный и альбомный режимы)----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+        /* Сюда добавляем стили*/
+    }
+    /* iPhone 5 (альбомный режим)----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+        /* Сюда добавляем стили*/
+    }
+    /* iPhone 5 (портретный режим)----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+        /* Сюда добавляем стили*/
+    }
+    
