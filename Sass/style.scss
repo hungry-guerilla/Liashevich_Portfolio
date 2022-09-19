@@ -65,6 +65,17 @@ body {
     color: #FF2B51;
 
     filter: blur(1px);
+    a {
+      text-decoration: none;
+      color: #FF2B51;
+      transition: all .4s;
+    
+      filter: blur(1px);
+    }
+
+    a:hover {
+      filter: blur(3px);
+    }
   }
 }
 
