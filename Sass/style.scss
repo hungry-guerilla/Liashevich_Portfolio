@@ -47,7 +47,6 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 36px;
     text-align: center;
     letter-spacing: 0.27em;
 
@@ -60,7 +59,6 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    line-height: 60px;
     text-align: right;
     letter-spacing: 0.055em;
 
@@ -104,36 +102,36 @@ body {
 
 }
 
-.image_wrapper {
-  .anon {
-    
-    margin: 0;
-    position: relative;
-    left: 450px;
-    width: 451px;
-    height: 536px;
+.anon {
+  position: relative;
+  left: 400px;
+  top:80px;
+  margin: 0;
+  width: 40%;
+  height: 40%;
 
-    z-index: 1000;
-  }
-  .circle {
-    position: relative;
-    right: 10px;
-    bottom:50px;
-    width: 507px;
-    height: 507px;
+  z-index: 3;
+}
+.circle {
+  position: relative;
+  right: 120px;
+  top: 10px;
+  width: 35%;
+  height: 35%;
 
-    z-index: 999;
-  }
-  .blur_circle {
-    position: relative;
-    left: 423px;
-    bottom: 595px;
-    width: 557px;
-    height: 557px;
+  filter: blur(60px);
 
-    filter: blur(1px);
-    z-index: 998;
-  }
+  z-index: 2;
+}
+.blur_circle {
+  position: relative;
+  right: 50px;
+  bottom: 480px;
+  width: 25%;
+  height: 25%;
+
+  filter: blur(0px);
+  z-index: 1;
 }
 
 
