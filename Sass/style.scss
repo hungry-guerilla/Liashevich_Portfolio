@@ -152,9 +152,9 @@ body {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  body {
-    overflow: hidden;
-  }
+  // body {
+  //   overflow: hidden;
+  // }
 
   .menu_wrapper .menu {
     display: flex;
@@ -174,7 +174,7 @@ and (max-device-width : 480px) {
   }
 
   .logo_title {
-    margin: 50px 150px 250px 100px;
+    margin: 50px 150px 0px 30px;
     transition: .4s all;
     
   }
