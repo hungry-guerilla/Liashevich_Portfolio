@@ -156,13 +156,14 @@ and (max-device-width : 480px) {
   //   overflow: hidden;
   // }
 
-  .menu_wrapper .menu {
+  .menu {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    font-size: 1px;
-    margin: 0 auto;
     transform: rotate(270deg);
-    text-align: center;
+    position: relative;
+    left:100px;
+    top:12px;
   }
 
   .logo_fio {
@@ -173,8 +174,14 @@ and (max-device-width : 480px) {
     text-align: center;
   }
 
+  .header_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .logo_title {
-    margin: 50px 150px 0px 30px;
+    
+  
     transition: .4s all;
     
   }
