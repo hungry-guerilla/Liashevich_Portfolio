@@ -125,7 +125,7 @@ body {
 }
 
 .anon {
-  margin: 0 auto;
+  
   width: 40%;
   height: 40%;
 
@@ -159,7 +159,6 @@ body {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   body {
-    overflow: hidden;
     background: linear-gradient(270deg, black 34%, rgba(255,15,15,1) 380%);
   }
 
