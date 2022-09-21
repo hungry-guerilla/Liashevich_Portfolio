@@ -16,7 +16,6 @@
 
 html { 
   box-sizing: border-box;
-  background-color:#070606;
 }
 
 *, *::before, *::after {
@@ -25,10 +24,12 @@ html {
 
 body {
   font-family: 'Poppins';
+  background-color: black;
   
 }
 
 .content {
+  max-width: 1720px;
   margin-top: 40px;
   margin-right: 100px;
   margin-left: 100px;
@@ -38,11 +39,10 @@ body {
   max-width: 1720px;
   margin: 0 auto;
   
-  background-color: #070606;
-  
 }
 
 .header_wrapper {
+  width: auto;
   display: flex;
   justify-content: space-between;
   .logo_title {
@@ -92,6 +92,7 @@ body {
   height: 50px;
   transform: rotate(90deg);
   .menu {
+    width: auto;
     display: flex;
     justify-content: space-between;
     a {
@@ -115,71 +116,82 @@ body {
 
 }
 
-.anon {
+.anonimage {
+  width: 100%;
   position: relative;
-  left: 400px;
-  top:80px;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anon {
+  margin: 0 auto;
   width: 40%;
   height: 40%;
 
   z-index: 3;
 }
-.circle {
-  position: relative;
-  right: 120px;
-  top: 10px;
-  width: 35%;
-  height: 35%;
+// .circle {
+//   position: relative;
+//   right: 120px;
+//   top: 10px;
+//   width: 35%;
+//   height: 35%;
 
-  filter: blur(60px);
+//   filter: blur(60px);
 
-  z-index: 2;
-}
-.blur_circle {
-  position: relative;
-  right: 50px;
-  bottom: 480px;
-  width: 25%;
-  height: 25%;
+//   z-index: 2;
+// }
+// .blur_circle {
+//   position: relative;
+//   right: 50px;
+//   bottom: 480px;
+//   width: 25%;
+//   height: 25%;
 
-  filter: blur(0px);
-  z-index: 1;
-}
+//   filter: blur(0px);
+//   z-index: 1;
+// }
 
 
 /* Смартфоны (портретный и альбомный режимы) ----------- */
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  // body {
-  //   overflow: hidden;
-  // }
+  body {
+    overflow: hidden;
+    background: linear-gradient(270deg, black 34%, rgba(255,15,15,1) 380%);
+  }
 
-  .menu {
+  .menu_wrapper {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+  }
+
+  .menu {
+    // padding-left: 50px;
+    flex-wrap:wrap;
     transform: rotate(270deg);
-    position: relative;
-    left:100px;
-    top:12px;
   }
 
+  // .menu_link {
+    
+  // }
   .logo_fio {
-    display: none;
-  }
-
-  a {
-    text-align: center;
+    // display: none;
   }
 
   .header_wrapper {
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items:baseline;
+    flex-direction: column-reverse;
   }
 
   .logo_title {
+    filter: blur(0px);
+    margin-top: 50px;
     
   
     transition: .4s all;
