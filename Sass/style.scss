@@ -30,9 +30,9 @@ body {
 
 .content {
   max-width: 1720px;
-  margin-top: 40px;
-  margin-right: 100px;
-  margin-left: 100px;
+  // margin-top: 40px;
+  // margin-right: 100px;
+  // margin-left: 100px;
 }
 // ДЛЯ ВЫРАВНИВАНИЯ ПО ЦЕНТРУ КОНТЕНТА И ШИРИНУ УСТАНОВИТЬ
 .wrapper {
@@ -42,6 +42,7 @@ body {
 }
 
 .header_wrapper {
+  margin: 20px 20px 0px 20px;
   width: auto;
   display: flex;
   justify-content: space-between;
@@ -130,9 +131,9 @@ body {
   margin: 0 auto;
   .mainpic {
     display: block;
-    margin: 124px auto 0px auto;
-    width: 40%;
-    height: 40%;
+    margin: 30px auto 0px auto;
+    width: 75%;
+    height: 75%;
   }
 }
 // .blur_circle {
@@ -146,6 +147,47 @@ body {
 //   z-index: 1;
 // }
 
+.footer_wrap {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0px 30px 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  .socimg {
+    padding:5px;
+  }
+}
+
+.web_title {
+  font-family: 'Poppins';
+  font-style:normal;
+  font-weight: 900;
+  font-size: 1.05rem;
+
+  color: #FFFFFF;
+  span:nth-child(2){
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 0px;
+    letter-spacing: 0em;
+
+  color: #C0C0C0;
+  }
+  span:nth-child(3) {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.055em;
+
+  color: #FF2B51;
+
+  filter: blur(1.7px);
+  }
+}
 
 /* Смартфоны (портретный и альбомный режимы) ----------- */
 @media only screen
