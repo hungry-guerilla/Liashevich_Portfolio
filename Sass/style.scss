@@ -46,27 +46,34 @@ body {
   display: flex;
   justify-content: space-between;
   .logo_title {
+    text-decoration: none;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 2.5em;
     text-align: center;
-    letter-spacing: 0.27em;
+    letter-spacing: 0.2em;
 
     color: #FF003D;
 
-    filter: blur(1.1px);
+    filter: blur(5px);
+
+    transition: .5s all;
+  }
+
+  .logo_title:hover {
+    filter:blur(.8px);
   }
   .logo_fio {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 2.8em;
     text-align: right;
     letter-spacing: 0.055em;
 
     color: #FF2B51;
 
-    filter: blur(1px);
+    filter: blur(.7px);
     a {
       text-decoration: none;
       color: #FF2B51;
@@ -100,8 +107,8 @@ body {
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
-      letter-spacing: 0.055em;
+      font-size: 1.3em;
+      letter-spacing: 0.0005em;
       text-decoration: none;
 
       color: #FFFFFF;
@@ -109,39 +116,25 @@ body {
   
     }
     a:hover {
-      filter: blur(3px);
+      filter: blur(2px);
       color:#FF2B51;
     }
   }
 
 }
 
-.anonimage {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main_img {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  .mainpic {
+    display: block;
+    margin: 124px auto 0px auto;
+    width: 40%;
+    height: 40%;
+  }
 }
-
-.anon {
-  
-  width: 40%;
-  height: 40%;
-
-  z-index: 3;
-}
-// .circle {
-//   position: relative;
-//   right: 120px;
-//   top: 10px;
-//   width: 35%;
-//   height: 35%;
-
-//   filter: blur(60px);
-
-//   z-index: 2;
-// }
 // .blur_circle {
 //   position: relative;
 //   right: 50px;
@@ -159,7 +152,7 @@ body {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   body {
-    background: linear-gradient(270deg, black 34%, rgba(255,15,15,1) 380%);
+    background: linear-gradient(270deg, black 34%, rgba(255,15,15,1) 470%);
   }
 
   .menu_wrapper {
@@ -176,9 +169,6 @@ and (max-device-width : 480px) {
   // .menu_link {
     
   // }
-  .logo_fio {
-    // display: none;
-  }
 
   .header_wrapper {
     width: auto;
@@ -202,9 +192,10 @@ and (max-device-width : 480px) {
     filter:blur(4px);
   }
 
-  .circle, .blur_circle, .anon {
-    display: none;
-  }
+ .mainpic {
+  position:relative;
+  bottom: 5rem;
+ }
 /* Сюда добавляем стили*/
 }
  
