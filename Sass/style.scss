@@ -36,6 +36,7 @@ body {
 // ДЛЯ ВЫРАВНИВАНИЯ ПО ЦЕНТРУ КОНТЕНТА И ШИРИНУ УСТАНОВИТЬ
 .wrapper {
   max-width: 1720px;
+  max-height: 957px;
   margin: 0 auto;
   
 }
@@ -130,7 +131,7 @@ body {
   display: block;
   .mainpic {
     display: block;
-    margin: 30px auto 0px auto;
+    margin: 100px auto 0px auto;
     width: 75%;
     height: 75%;
 
