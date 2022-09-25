@@ -126,15 +126,50 @@ body {
 }
 
 .main_img {
+  position: relative;
   width: auto;
   height: auto;
   display: block;
-  margin: 0 auto;
   .mainpic {
     display: block;
     margin: 30px auto 0px auto;
     width: 75%;
     height: 75%;
+
+    z-index: 1;
+  }
+  .ellipse {
+    position: absolute;
+    top: 100px;
+    left: 600px;
+    width: 60%;
+    height: 60%;
+    opacity: .6;
+    
+    z-index: 2;
+
+    animation-name: moveForward;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+  }
+  @keyframes moveForward {
+    0% {
+      transform: translateY(-300px);
+    }
+    
+    25% {
+      transform: translateX(100px) ;
+    }
+
+    75% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateY(200px);
+    }
+    
   }
 }
 // .blur_circle {
@@ -152,12 +187,12 @@ body {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  padding: 0px 30px 0px 30px;
+  padding: 72px 30px 0px 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   .socimg {
-    padding:5px;
+    padding-left:5px;
   }
 }
 
