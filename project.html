@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>GIPNER</title>
 </head>
     <body>
@@ -16,29 +18,54 @@
                          <div class="logo_fio">MAXIM<br>LIASHEVICH</div>
                 </div>
      
-                 <div class="menu_wrapper">
+                <div class="menu_wrapper">
                      <div class="menu">
                          <a href="./about.html" class="menu_link">ABOUT</a>
                          <a href="./project.html" class="menu_link">PROJECT</a>
                          <a href="#" class="menu_link">CONTACTS</a>
                      </div>
-                 </div>
+                </div>
                  <!-- ANONIMAGE -->
                  <!-- <img src="/img/anon.png" alt="1" class="anon"> -->
-                 <img src="./img/Ellipse 1.png" alt="2" class="circle">
-                 <style type="text/css">
-                    .circle { 
-                     margin-right: 500px;
-                     margin-left: 595px;
-                     margin-top: 20px;
-                     width: 30%;
-                     height: 30%;
-
-                     filter:blur(20px)
-                    }
-                   </style>
                  <!-- <img src="/img/Ellipse 1.png" alt="3" class="blur_circle"> -->
-             </div>
+                 <div class="container">
+                    <div class="carousel">
+                        <input type="radio" id="carousel-1" name="carousel[]" checked>
+                        <input type="radio" id="carousel-2" name="carousel[]">
+                     <input type="radio" id="carousel-3" name="carousel[]">
+                        <input type="radio" id="carousel-4" name="carousel[]">
+                        <input type="radio" id="carousel-5" name="carousel[]">
+                        <ul class="carousel__items">
+                            <li class="carousel__item"><a href="#"><img src="//lh5.googleusercontent.com/-cTEgPOnd3l8/U8-EmaZ4KNI/AAAAAAAABc8/6eacbALkQ6A/w1358-h905-no/carousel-1.JPG" alt=""></a></li>
+                            <li class="carousel__item"><a href="#"><img src="//lh4.googleusercontent.com/-ntVHbbWX5eo/U8-EmV8P4cI/AAAAAAAABc4/ICYBGkcztTc/w1358-h905-no/carousel-2.jpg" alt=""></a></li>
+                            <li class="carousel__item"><a href="#"><img src="//lh5.googleusercontent.com/-batEXUZE_e4/U8-EmLF9-hI/AAAAAAAABc0/J3tJVUa6Buk/w1358-h905-no/carousel-3.jpg" alt=""></a></li>
+                            <li class="carousel__item"><a href="#"><img src="//lh5.googleusercontent.com/-gywqIeMvel0/U8-EolKdtkI/AAAAAAAABdM/G0-NHuvvJUU/w1358-h905-no/carousel-4.jpg" alt=""></a></li>
+                            <li class="carousel__item"><a href="#"><img src="//lh5.googleusercontent.com/--2iANjL3ikc/U8-EoGJ18mI/AAAAAAAABdI/fBe-q3Gos6Y/w1358-h905-no/carousel-5.jpg" alt=""></a></li>
+                        </ul>
+                     <div class="carousel__prev">
+                         <label for="carousel-1"></label>
+                         <label for="carousel-2"></label>
+                         <label for="carousel-3"></label>
+                         <label for="carousel-4"></label>
+                         <label for="carousel-5"></label>
+                     </div>
+                     <div class="carousel__next">
+                       <label for="carousel-1"></label>
+                       <label for="carousel-2"></label>
+                       <label for="carousel-3"></label>
+                       <label for="carousel-4"></label>
+                       <label for="carousel-5"></label>
+                     </div>
+                     <div class="carousel__nav">
+                       <label for="carousel-1"></label>
+                       <label for="carousel-2"></label>
+                       <label for="carousel-3"></label>
+                       <label for="carousel-4"></label>
+                       <label for="carousel-5"></label>
+                     </div>
+                   </div>
+                 </div>
+            </div>
         </div>
         
     </body>
