@@ -151,162 +151,177 @@
   }
 
   /* CAROUSEL */
-  /** * Carousel.sass * @author: Dang Van Thanh * @github: https://github.com/dangvanthanh/carousel.sass * @description: A Simple Carousel Pure CSS Using Sass * @version: 1.0.0 */
- .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev > label:nth-child(5), .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next > label:nth-child(4), .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__prev > label:nth-child(3), .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__next > label:nth-child(5), .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__prev > label:nth-child(4), .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__next > label:nth-child(1) {
-  opacity: 1 !important;
-  z-index: 3;
+  
+li {
+  list-style: none;
 }
-
-.container {
-  width: 1400px;
-  min-width: 900px;
-  margin-top: 30px;
+input[type="radio"] {
+  display: none;
 }
-.carousel {
+.js-slider {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.js-slider_item {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  padding: 40px 20px 20px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: right center;
+  transform: translate3d(0%, 0%, 0) rotateY(30deg) scaleX(0.95);
+  transition: all 1s ease,transform 1s cubic-bezier(0.43, 0.28, 0.51, 1);
+}
+#s-1:checked ~ .js-slider .js-slider_item.img-1,
+#s-2:checked ~ .js-slider .js-slider_item.img-2,
+#s-3:checked ~ .js-slider .js-slider_item.img-3 {
+  opacity: 1;
+  visibility: visible;
+  transform-origin: left center;
+  transform: translate3d(0, 0, 0) rotateY(0deg) scaleX(1);
+}
+.js-slider_img {
+  width: 100%;
+  height: 60%;
   position: relative;
   overflow: hidden;
 }
-.carousel > input[type="radio"] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  top: 0;
-}
-.carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item, .carousel > input[type="radio"]:checked ~ .carousel__prev > label, .carousel > input[type="radio"]:checked ~ .carousel__next > label {
-  opacity: 0;
-}
-.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
-  opacity: 1;
-}
-.carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
-  background: #ccc;
-  cursor: default;
-  pointer-events: none;
-  opacity: .4;
-}
-.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
-  opacity: 1;
-}
-.carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
-  background: #ccc;
-  cursor: none;
-  pointer-events: none;
-  opacity: .4;
-}
-.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
-  opacity: 1;
-}
-.carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
-  background: #ccc;
-  cursor: none;
-  pointer-events: none;
-  opacity: .4;
-}
-.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
-  opacity: 1;
-}
-.carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
-  background: #ccc;
-  cursor: none;
-  pointer-events: none;
-  opacity: .4;
-}
-.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
-  opacity: 1;
-}
-.carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
-  background: #ccc;
-  cursor: none;
-  pointer-events: none;
-  opacity: .4;
-}
-.carousel__items {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  width: 100%;
-  height: 750px;
-  position: relative;
-}
-.carousel__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: opacity 2s;
-  -webkit-transition: opacity 2s;
-}
-.carousel__item img {
-  width: 100%;
-  vertical-align: middle;
-}
-.carousel__prev > label, .carousel__next > label {
-  border: none;
-  border-radius: 50%;
-  cursor:pointer;
-  display: block;
-  width: 40px;
-  height: 40px;
+.c-img-w-full {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  opacity: .7;
-  z-index: 2;
-}
-.carousel__prev > label:hover, .carousel__next > label:hover, .carousel__prev > label:focus, .carousel__next > label:focus {
-  opacity: 0.3 !important;
-}
-.carousel__prev > label:before, .carousel__next > label:before, .carousel__prev > label:after, .carousel__next > label:after {
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-}
-.carousel__prev > label:before, .carousel__next > label:before {
-  background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
-  width: 60%;
-  height: 60%;
-  top: 20%;
-}
-.carousel__prev > label {
-  left: 2%;
-}
-.carousel__prev > label:before {
-  left: 35%;
-  top: 20%;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-.carousel__next > label {
-  right: 2%;
-}
-.carousel__next > label:before {
-  left: 10%;
-  transform: rotate(315deg);
-  -webkit-transform: rotate(315deg);
-}
-.carousel__nav {
-  position: absolute;
-  bottom: 3%;
-  left: 0;
-  text-align: center;
+  left: 50%;
   width: 100%;
-  z-index: 3;
+  height: auto;
+  transform: translate3d(-50%, -50%, 0);
 }
-.carousel__nav > label {
-  border: 1px solid #fff;
+.c-img-h-full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translate3d(-50%, -50%, 0);
+}
+figcaption {
+  display: block;
+}
+.wo-h3 {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e60012;
+}
+.c-label {
   display: inline-block;
+  color: #eee;
+  background-color: rgba(139,0,10,0.9);
+  line-height: 1;
+  padding: 0.5em 0.9em;
+  margin-right: 0.5em;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.view-sm {
+  display: none;
+}
+.js-slider_nav {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translate3d(0, -50%, 0);
+}
+.js-slider_nav_item.prev {
+  left: 0;
+}
+.js-slider_nav_item.next {
+  right: 0;
+  transform: rotateY(180deg);
+}
+.js-slider_nav_item {
+  position: absolute;
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #e60012;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 0.125%;
-  width: 10px;
-  height: 10px;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-slider_nav_item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1rem;
+  top: 55%;
+  width: 1rem;
+  height: 1px;
+  background-color: #e60012;
+  transform-origin: left bottom;
+  transform: translate3d(0, -50%, 0) rotate(-45deg);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.js-slider_nav_item:hover {
+   transform: translate3d(-30%, 0, 0);
+}
+.js-slider_nav_item.next:hover {
+   transform: rotateY(180deg) translate3d(-30%, 0, 0);
+}
+.js-slider_nav_item:hover:before {
+  transform: translate3d(0, -50%, 0) rotate(-30deg);
+}
+.js-slider_nav_item:after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 2rem;
+  height: 1px;
+  background-color: #e60012;
+  transform: translate3d(-50%, -50%, 0);
+}
+#s-1:checked ~ .js-slider .js-slider_nav .s-nav-1,
+#s-2:checked ~ .js-slider .js-slider_nav .s-nav-2,
+#s-3:checked ~ .js-slider .js-slider_nav .s-nav-3 {
+  display: block;
+}
+.js-slider_indicator {
+  position: absolute;
+  left: 0;
+  top: 63%;
+  width: 100%;
+  text-align: center;
+}
+.js-slider-indi {
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+  cursor: pointer;
+}
+.js-slider-indi:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background: #e60012;
+  transform: translate3d(-50%, -50%, 0);
+}
+.js-slider-indi:hover:after {
+  transform: translate3d(-50%, -50%, 0) scale(1.5);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#s-1:checked ~ .js-slider .js-slider_indicator .indi-1:after,
+#s-2:checked ~ .js-slider .js-slider_indicator .indi-2:after,
+#s-3:checked ~ .js-slider .js-slider_indicator .indi-3:after {
+  transform: translate3d(-50%, -50%, 0) scale(2.5);
 }
 
   /* Смартфоны (портретный и альбомный режимы) ----------- */
