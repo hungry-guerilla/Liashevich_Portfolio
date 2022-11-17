@@ -142,24 +142,27 @@ body {
   width: auto;
   height: auto;
   display: block;
+  z-index: 99;
 }
 .main_img .mainpic {
   display: block;
   margin: 100px auto 0px auto;
   width: 75%;
   height: 75%;
+  z-index: 99;
 }
 .main_img .ellipse {
   position: absolute;
-  top: 100px;
-  left: 200px;
-  width: 60%;
-  height: 60%;
+  top: 140px;
+  left: 140px;
+  width: 70%;
+  height: 70%;
   opacity: 0.6;
+  z-index: 1;
   -webkit-animation-name: moveForward;
           animation-name: moveForward;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
   -webkit-animation-iteration-count: infinite;
@@ -169,38 +172,38 @@ body {
 }
 @-webkit-keyframes moveForward {
   0% {
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   25% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   75% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
 }
 @keyframes moveForward {
   0% {
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   25% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   75% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
 }
 
