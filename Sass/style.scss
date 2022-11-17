@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: 'Poppins';
-  background-color: rgb(24, 23, 23);
+  background-color: rgba(0, 0, 0, 0.939);
   
 }
 // ДЛЯ ВЫРАВНИВАНИЯ ПО ЦЕНТРУ КОНТЕНТА И ШИРИНУ УСТАНОВИТЬ
@@ -35,18 +35,21 @@ body {
     margin: 0 auto;
     max-width: 1620px;
     .prosto {
+      
       filter: blur(1px);
       text-transform: uppercase;
       position: absolute;
       top: 10%;
-      left: 42%;
+      left: 37%;
+      text-align: center;
+      text-shadow: 6px 8px 4px rgba(255, 0, 0, 0.688);
       font-family: 'Amatic SC';
       color: red;
     /*   text-shadow:7px 3px 1.5px grey; */
       font-weight: 700;
       margin: 0.4em 0;
     }
-    .prosto { font-size: 1.6em; }
+    .prosto { font-size: 2.2em; }
   }
 }
 
