@@ -1,468 +1,400 @@
+@charset "UTF-8";
 /* poppins-regular - latin */
 @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/poppins-v20-latin-regular.eot');
-    /* IE9 Compat Modes */
-    src: local(''), url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), url('../fonts/poppins-v20-latin-regular.woff') format('woff'), url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'), url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg');
-    /* Legacy iOS */
-  }
-  html {
-    box-sizing: border-box;
-  }
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-  body {
-    font-family: 'Poppins';
-    background-color: black;
-  }
-  .wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
-  }
-  .header_wrapper {
-    margin: 20px 20px 0px 20px;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  .header_wrapper .logo_title {
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.5em;
-    text-align: center;
-    letter-spacing: 0.2em;
-    color: #FF003D;
-    filter: blur(5px);
-    transition: 0.5s all;
-  }
-  .header_wrapper .logo_title:hover {
-    filter: blur(0.8px);
-  }
-  .header_wrapper .logo_fio {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.8em;
-    text-align: right;
-    letter-spacing: 0.055em;
-    color: #FF2B51;
-    filter: blur(0.7px);
-  }
-  .header_wrapper .logo_fio a {
-    text-decoration: none;
-    color: #FF2B51;
-    transition: all 0.4s;
-    filter: blur(1px);
-  }
-  .header_wrapper .logo_fio a:hover {
-    filter: blur(3px);
-  }
-  .menu_wrapper {
-    position: relative;
-    float: right;
-    top: 170px;
-    left: 50px;
-    width: 200px;
-    height: 50px;
-    transform: rotate(90deg);
-  }
-  .menu_wrapper .menu {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu_wrapper .menu a {
-    padding-right: 70px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.3em;
-    letter-spacing: 0.0005em;
-    text-decoration: none;
-    color: #FFFFFF;
-    transition: 0.4s all;
-  }
-  .menu_wrapper .menu a:hover {
-    filter: blur(2px);
-    color: #FF2B51;
-  }
-  .main_img {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  .main_img .mainpic {
-    display: block;
-    margin: 30px auto 0px auto;
-    width: 75%;
-    height: 75%;
-  }
-  
-  .blur_circle {
-    display: none;
-    margin: 0 auto;
-  }
-
-  .text {
-    padding-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-
-    
-  }
-  .text-focus-in {
-    color: rgba(245, 245, 245, 0.842);
-    font-size: 40px;
-    text-align: center;
-    line-height: 70px;
-    letter-spacing: 0.03em;
-
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.750, 0.095, 0.680, 0.530) both;
-	  animation: text-focus-in 1s cubic-bezier(0.750, 0.095, 0.680, 0.530) both;
-  }
-
-  /**
- * ----------------------------------------
- * animation text-focus-in
- * ----------------------------------------
- */
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v20-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/poppins-v20-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"), url("../fonts/poppins-v20-latin-regular.woff") format("woff"), url("../fonts/poppins-v20-latin-regular.ttf") format("truetype"), url("../fonts/poppins-v20-latin-regular.svg#Poppins") format("svg"); /* Legacy iOS */
 }
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-
-  .footer_wrap {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    padding: 0px 30px 0px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .footer_wrap .socimg {
-    padding: 5px;
-  }
-  .social_link {
-    text-decoration: none;
-    transition: 0.4s all;
-  }
-  .social_link:hover {
-    filter: blur(2px);
-  }
-  .web_title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 1.05rem;
-    color: #FFFFFF;
-  }
-  .web_title span:nth-child(2) {
-    font-family: 'Poppins';
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 0px;
-    letter-spacing: 0em;
-    color: #C0C0C0;
-  }
-  .web_title span:nth-child(3) {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.055em;
-    color: #FF2B51;
-    filter: blur(1.7px);
-  }
-
-  /* CAROUSEL */
-  
-li {
-  list-style: none;
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
-input[type="radio"] {
-  display: none;
+
+body {
+  font-family: "Poppins";
+  background-color: rgb(24, 23, 23);
 }
-.js-slider {
+
+.wrapper {
   position: relative;
-  width: 80%;
-  height: 100vh;
+  max-width: 100%;
   margin: 0 auto;
 }
-.js-slider_item {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px 20px 20px 20px;
-  opacity: 0;
-  visibility: hidden;
-  transform-origin: right center;
-  transform: translate3d(0%, 0%, 0) rotateY(30deg) scaleX(0.95);
-  transition: all 1s ease,transform 1s cubic-bezier(0.43, 0.28, 0.51, 1);
-}
-#s-1:checked ~ .js-slider .js-slider_item.img-1,
-#s-2:checked ~ .js-slider .js-slider_item.img-2,
-#s-3:checked ~ .js-slider .js-slider_item.img-3 {
-  opacity: 1;
-  visibility: visible;
-  transform-origin: left center;
-  transform: translate3d(0, 0, 0) rotateY(0deg) scaleX(1);
-}
-.js-slider_img {
-  width: 100%;
-  height: 60%;
+.wrapper .content {
   position: relative;
-  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1620px;
 }
-.c-img-w-full {
+.wrapper .content .prosto {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  text-transform: uppercase;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: auto;
-  transform: translate3d(-50%, -50%, 0);
+  top: 10%;
+  left: 42%;
+  font-family: "Amatic SC";
+  color: red;
+  /*   text-shadow:7px 3px 1.5px grey; */
+  font-weight: 700;
+  margin: 0.4em 0;
 }
-.c-img-h-full {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: 100%;
-  transform: translate3d(-50%, -50%, 0);
-}
-figcaption {
-  display: block;
-}
-.wo-h3 {
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #e60012;
-}
-.c-label {
-  display: inline-block;
-  color: #eee;
-  background-color: rgba(139,0,10,0.9);
-  line-height: 1;
-  padding: 0.5em 0.9em;
-  margin-right: 0.5em;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-.view-sm {
-  display: none;
-}
-.js-slider_nav {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  transform: translate3d(0, -50%, 0);
-}
-.js-slider_nav_item.prev {
-  left: 0;
-}
-.js-slider_nav_item.next {
-  right: 0;
-  transform: rotateY(180deg);
-}
-.js-slider_nav_item {
-  position: absolute;
-  display: none;
-  width: 4rem;
-  height: 4rem;
-  border: 1px solid #e60012;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.js-slider_nav_item:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 1rem;
-  top: 55%;
-  width: 1rem;
-  height: 1px;
-  background-color: #e60012;
-  transform-origin: left bottom;
-  transform: translate3d(0, -50%, 0) rotate(-45deg);
-  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.js-slider_nav_item:hover {
-   transform: translate3d(-30%, 0, 0);
-}
-.js-slider_nav_item.next:hover {
-   transform: rotateY(180deg) translate3d(-30%, 0, 0);
-}
-.js-slider_nav_item:hover:before {
-  transform: translate3d(0, -50%, 0) rotate(-30deg);
-}
-.js-slider_nav_item:after {
-  content: "";
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  width: 2rem;
-  height: 1px;
-  background-color: #e60012;
-  transform: translate3d(-50%, -50%, 0);
-}
-#s-1:checked ~ .js-slider .js-slider_nav .s-nav-1,
-#s-2:checked ~ .js-slider .js-slider_nav .s-nav-2,
-#s-3:checked ~ .js-slider .js-slider_nav .s-nav-3 {
-  display: block;
-}
-.js-slider_indicator {
-  position: absolute;
-  left: 0;
-  top: 63%;
-  width: 100%;
-  text-align: center;
-}
-.js-slider-indi {
-  position: relative;
-  display: inline-block;
-  padding: 2rem;
-  cursor: pointer;
-}
-.js-slider-indi:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1rem;
-  background: #e60012;
-  transform: translate3d(-50%, -50%, 0);
-}
-.js-slider-indi:hover:after {
-  transform: translate3d(-50%, -50%, 0) scale(1.5);
-  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-#s-1:checked ~ .js-slider .js-slider_indicator .indi-1:after,
-#s-2:checked ~ .js-slider .js-slider_indicator .indi-2:after,
-#s-3:checked ~ .js-slider .js-slider_indicator .indi-3:after {
-  transform: translate3d(-50%, -50%, 0) scale(2.5);
+.wrapper .content .prosto {
+  font-size: 1.6em;
 }
 
-  /* Смартфоны (портретный и альбомный режимы) ----------- */
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    body {
-      width: 100%;
-      height: 100%;
-      background-color: black;
-    }
-    .content {
-      margin: 0 auto;
-    }
-    .menu_wrapper {
-      display: flex;
-      justify-content: center;
-    }
-    .menu {
-      flex-wrap: wrap;
-      transform: rotate(270deg);
-    }
-    .header_wrapper {
-      width: auto;
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      flex-direction: column-reverse;
-    }
-    .logo_title {
-      margin-top: 50px;
-      transition: 0.4s all;
-    }
-    .logo_title:hover {
-      color: pink;
-      filter: blur(4px);
-    }
-    .mainpic {
-      display: none;
-      position: relative;
-      bottom: 5rem;
-    }
-    .footer_wrap {
-      display: flex;
-      justify-content: center;
-      padding-top: 380px;
-      align-content: flex-end;
-    }
-    .web_title, .main_img, .logo_fio {
-      display: none;
-      /* Сюда добавляем стили*/
-    }
+.header_wrapper {
+  padding: 20px 20px 0px 20px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header_wrapper .logo_title {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5em;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #FF003D;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.header_wrapper .logo_title:hover {
+  -webkit-filter: blur(0.8px);
+          filter: blur(0.8px);
+}
+.header_wrapper .logo_fio {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.8em;
+  text-align: right;
+  letter-spacing: 0.055em;
+  color: #FF2B51;
+  -webkit-filter: blur(0.7px);
+          filter: blur(0.7px);
+}
+.header_wrapper .logo_fio a {
+  text-decoration: none;
+  color: #FF2B51;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+.header_wrapper .logo_fio a:hover {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.menu_wrapper {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.menu_wrapper .menu {
+  padding-top: 10px;
+  padding-left: 120px;
+  position: relative;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu_wrapper .menu a {
+  padding-right: 50px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.3em;
+  letter-spacing: 0.0555em;
+  text-decoration: none;
+  color: #FFFFFF;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+.menu_wrapper .menu a:hover {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  color: #FF2B51;
+}
+
+.main_img {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: block;
+}
+.main_img .mainpic {
+  display: block;
+  margin: 100px auto 0px auto;
+  width: 75%;
+  height: 75%;
+}
+.main_img .ellipse {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 60%;
+  height: 60%;
+  opacity: 0.6;
+  -webkit-animation-name: moveForward;
+          animation-name: moveForward;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes moveForward {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
   }
-  /* Смартфоны (альбомный режим) ----------- */
-  @media only screen and (min-width: 321px) {
-    /* Сюда добавляем стили*/
+  25% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
-  /* Смартфоны (портретный режим) ----------- */
-  @media only screen and (max-width: 320px) {
-    /* Сюда добавляем стили*/
+  75% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
   }
-  /* iPad (портретный и альбомный режимы) ----------- */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    /* Сюда добавляем стили*/
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
-  /* iPad (альбомный режим) ----------- */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    /* Сюда добавляем стили*/
+}
+@keyframes moveForward {
+  0% {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
   }
-  /* iPad (портретный режим) ----------- */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    /* Сюда добавляем стили*/
+  25% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
-  /* Настольные компьютеры и ноутбуки ----------- */
-  @media only screen and (min-width: 1224px) {
-    /* Сюда добавляем стили*/
+  75% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
   }
-  /* Большие экраны ----------- */
-  @media only screen and (min-width: 1824px) {
-    /* Сюда добавляем стили*/
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
-  /* iPhone 5 (портретный и альбомный режимы)----------- */
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-    /* Сюда добавляем стили*/
+}
+
+.footer_wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 57px 30px 0px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.footer_wrap .socimg {
+  padding-left: 5px;
+}
+
+.social_link {
+  text-decoration: none;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.social_link:hover {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.web_title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.45rem;
+  color: #FFFFFF;
+}
+.web_title span:nth-child(2) {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 0px;
+  letter-spacing: 0em;
+  color: #C0C0C0;
+}
+.web_title span:nth-child(3) {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.055em;
+  color: #FF2B51;
+  -webkit-filter: blur(1.7px);
+          filter: blur(1.7px);
+}
+
+.Slider {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Slider img {
+  width: 350px;
+}
+
+.Slider li {
+  display: grid;
+  width: 350px;
+  height: 385px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  -webkit-box-shadow: 0 0 1rem grey;
+          box-shadow: 0 0 1rem grey;
+  background: white;
+  padding: 1rem;
+  line-height: 2;
+}
+
+/* Смартфоны (портретный и альбомный режимы) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    background: -webkit-gradient(linear, right top, left top, color-stop(34%, black), color-stop(470%, rgb(255, 15, 15)));
+    background: linear-gradient(270deg, black 34%, rgb(255, 15, 15) 470%);
   }
-  /* iPhone 5 (альбомный режим)----------- */
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-    /* Сюда добавляем стили*/
+  .content {
+    margin: 0 auto;
   }
-  /* iPhone 5 (портретный режим)----------- */
-  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-    /* Сюда добавляем стили*/
+  .menu_wrapper {
+    padding-top: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  
+  .menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu_link {
+    padding-bottom: 25px;
+  }
+  .header_wrapper {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .logo_title {
+    margin-top: 50px;
+    -webkit-transition: 0.4s all;
+    transition: 0.4s all;
+  }
+  .logo_title:hover {
+    color: pink;
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+  }
+  .mainpic {
+    display: none;
+    position: relative;
+    bottom: 5rem;
+  }
+  .footer_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 280px;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  .footer_wrap .social_link {
+    padding-left: 0px;
+  }
+  .web_title, .logo_fio {
+    display: none;
+  }
+  .main_img .mainpic {
+    display: none;
+  }
+  /* Сюда добавляем стили*/
+}
+/* Смартфоны (альбомный режим) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Сюда добавляем стили*/
+}
+/* Смартфоны (портретный режим) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Сюда добавляем стили*/
+}
+/* iPad (портретный и альбомный режимы) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Сюда добавляем стили*/
+}
+/* iPad (альбомный режим) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Сюда добавляем стили*/
+}
+/* iPad (портретный режим) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Сюда добавляем стили*/
+}
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Сюда добавляем стили*/
+}
+/* Большие экраны ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Сюда добавляем стили*/
+}
+/* iPhone 5 (портретный и альбомный режимы)----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  /* Сюда добавляем стили*/
+}
+/* iPhone 5 (альбомный режим)----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  /* Сюда добавляем стили*/
+}
+/* iPhone 5 (портретный режим)----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  /* Сюда добавляем стили*/
+}/*# sourceMappingURL=style.css.map */

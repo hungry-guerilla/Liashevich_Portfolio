@@ -22,15 +22,34 @@ html {
 
 body {
   font-family: 'Poppins';
-  background-color: black;
+  background-color: rgb(24, 23, 23);
   
 }
 // ДЛЯ ВЫРАВНИВАНИЯ ПО ЦЕНТРУ КОНТЕНТА И ШИРИНУ УСТАНОВИТЬ
 .wrapper {
-  max-width: 1920px;
+  position: relative;
+  max-width: 100%;
   margin: 0 auto;
-  
+  .content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1620px;
+    .prosto {
+      filter: blur(1px);
+      text-transform: uppercase;
+      position: absolute;
+      top: 10%;
+      left: 42%;
+      font-family: 'Amatic SC';
+      color: red;
+    /*   text-shadow:7px 3px 1.5px grey; */
+      font-weight: 700;
+      margin: 0.4em 0;
+    }
+    .prosto { font-size: 1.6em; }
+  }
 }
+
 
 .header_wrapper {
   padding: 20px 20px 0px 20px;
