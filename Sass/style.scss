@@ -281,7 +281,9 @@ and (max-device-width : 480px) {
   body {
     background: linear-gradient(270deg, black 34%, rgba(255,15,15,1) 470%);
   }
-
+  .prosto {
+    display: none;
+  }
   .content {
     margin: 0 auto;
   }

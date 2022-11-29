@@ -27,12 +27,12 @@ body {
   max-width: 100%;
   margin: 0 auto;
 }
-.content {
+.wrapper .content {
   position: relative;
   margin: 0 auto;
   max-width: 1620px;
 }
-.prosto {
+.wrapper .content .prosto {
   -webkit-filter: blur(1px);
           filter: blur(1px);
   text-transform: uppercase;
@@ -47,7 +47,7 @@ body {
   font-weight: 700;
   margin: 0.4em 0;
 }
-.prosto {
+.wrapper .content .prosto {
   font-size: 2.2em;
 }
 
@@ -103,9 +103,9 @@ body {
 }
 
 .menu_wrapper {
-  padding-top: 10px;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  width: auto;
+  height: auto;
 }
 .menu_wrapper .menu {
   padding-top: 10px;
@@ -137,62 +137,6 @@ body {
   color: #FF2B51;
 }
 
-.text {
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding-top: 100px;
-  font-family: inherit;
-  text-transform: uppercase;
-  color: ivory;
-  /* position: absolute;
-  left: 23.5%; */
-  line-height: 60px;
-  text-shadow: 7px 5px 9px red;
-  text-align: center;
-  font-size: 2.5rem;
-  opacity: .9;
-}
-.Maxim {
-  color:#FF2B51;
-  filter: blur(4px);
-  transition: .6s all linear;
-}
-.Maxim:hover {
-  filter: blur(0px);
-}
-
-.image_wrapper {
-  position: relative;
-}
-.blur_circle {
-  z-index: 1;
-  position: absolute;
-  top: 10%;
-
-  animation-name: leftslide;
-  animation-direction:alternate;
-  animation-duration: 11s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-@keyframes leftslide {
-  0% {
-    
-        transform: translateX(0px);
-  }
-  25% {
-    
-        transform: translateX(800px);
-  }
-  75% {
-        transform: translateX(0px);
-  }
-  100% {
-        transform: translateX(800px);
-  }
-}
 .main_img {
   position: relative;
   width: auto;
@@ -349,6 +293,9 @@ body {
   body {
     background: -webkit-gradient(linear, right top, left top, color-stop(34%, black), color-stop(470%, rgb(255, 15, 15)));
     background: linear-gradient(270deg, black 34%, rgb(255, 15, 15) 470%);
+  }
+  .prosto {
+    display: none;
   }
   .content {
     margin: 0 auto;
